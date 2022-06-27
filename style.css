@@ -1,0 +1,161 @@
+/*------ Reset -----*/
+* {
+  margin: 0;
+  box-sizing: border-box;
+
+}
+
+.text {
+  color: var(--text-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+
+
+/*------ Root-----*/
+:root {
+  --backgrond: #000;
+  --text-color: #FFF;
+  --button: #8257E5;
+  --border: #29292E;
+  --border-menu-mobile: #A8A8B3;
+  --text-color-menu-mobile: #E1E1E6;
+}
+
+/*------ Base -----*/
+.divider-0 {
+  height: 1px;
+  background: linear-gradient(270deg,
+      #FFF,
+      #8257E5);
+  margin-bottom: 4rem;
+  margin-top: -0.25rem;
+}
+
+.divider-1 {
+  height: 1px;
+  background: linear-gradient(270deg,
+      #8257E5,
+      #FFF);
+  margin-bottom: 4rem;
+  margin-top: 4rem;
+}
+
+.divider-2 {
+  height: 1px;
+  background: linear-gradient(270deg,
+      #FFF,
+      #8257E5);
+  margin-bottom: 4rem;
+  margin-top: 4rem;
+}
+
+
+/*------ Layout -----*/
+body {
+  background-color: var(--backgrond);
+}
+
+#header {
+  border-bottom: 1px solid var(--border-menu-mobile);
+  padding: 1.5rem;
+  position: fixed;
+
+  width: 100%;
+  justify-content: space-between;
+  z-index: 1;
+}
+
+.container {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  margin-bottom: auto;
+  margin-top: auto;
+}
+
+.grid {
+  display: grid;
+
+}
+
+.section {
+  margin-bottom: auto;
+}
+
+
+/*------ Navigation -----*/
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*------ Home -----*/
+
+#home h1 {
+  color: var(--text-color);
+  text-align: center;
+  margin: 10rem 2rem;
+  font-size: 1.87rem;
+  letter-spacing: 0.03rem;
+  font-family: 'Manrope';
+  line-height: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 5rem;
+}
+
+#home .button {
+  color: var(--text-color-menu-mobile);
+  border: 1.5px solid var(--button);
+  border-radius: 0.25rem;
+  padding: 0.5rem 2rem;
+  transition: background 0.3s;
+}
+
+#home .button:hover {
+  background-color: var(--button);
+}
+
+#home .subtitle {
+  text-align: center;
+  font-size: 1.87rem;
+  margin-top: 2rem;
+  font-family: Manrope, sans-serif;
+  color: var(--text-color);
+  margin-bottom: 2rem;
+  margin-top: 4rem;
+}
+
+#home .subtitle h2~h2 {
+  color: black;
+  text-shadow:
+    -1px -1px 0 var(--button),
+    1px -1px 0 var(--button),
+    -1px 1px 0 var(--button),
+    1px 1px 0 var(--button);
+}
+
+
+#home .image {
+  width: 100%;
+  position: relative;
+  background-image: url(/assets/assets/blur-mobile.png);
+  background-size: contain;
+}
+
+#home .blur {
+  position: relative;
+  width: 100%;
+}
+
+#home div {}
+
+#home .container {
+  justify-items: center;
+
+
+}
+
+/*------ Coffees -----*/
