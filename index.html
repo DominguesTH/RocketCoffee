@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>GreatCoffee</title>
+   <meta name="description" content="Venha conferia as melhores opções de café do momento">
 
   <!-- Styles -->
   <link rel="stylesheet" href="style.css">
@@ -13,29 +14,37 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Arima:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&display=swap" rel="stylesheet">
+  
+  <!-- Icons -->
+  <script src="https://kit.fontawesome.com/302fb988c7.js" crossorigin="anonymous"></script>
 
 </head>
 <body>
   <header id="header">
-    <nav  class="container">
-      <div>
-       <a href="home"> 
-         <img class="logo" src="./assets/assets/logo-mobile.svg" alt="Logotipo da Rocketseat">
-       </a>
-      </div>
-      <!--
-      <div>
-        <ul>
-          <li><a class="title" href="home">Home</a></li>
-          <li><a class="title" href="coffees">Coffees</a></li>
-          <li><a class="title" href="about">Sobre nós</a></li>
-          <li><a class="title" href="place">Local</a></li>
-          <li><a class="title" href="contact">Contato</a></li>
+    <nav class="container">
+      
+      <a href="#home"><img  class="logo" src="./assets/assets/logo-mobile.svg"  alt="Logotipo da Rocketseat"></a>
+
+     <!------ home menu ------> 
+      <div class="menu" >
+        <ul class="grid">
+          <li><a class="title" href="#home">Home</a></li>
+          <li><a class="title" href="#coffees">Coffees</a></li>
+          <li><a class="title" href="#place">Local</a></li>
+          <li><a class="title" href="#about">Sobre nós</a></li>
+          <li><a class="title" href="#contact">Contato</a></li>
         </ul>
       </div>
-      -->
-      <a href="#"> 
-        <img src="./assets/assets/menu-buguer-open.svg"></a>
+      <!------ //home menu ------>
+       
+        <img class="toggle" src="./assets/assets/menu-buguer-open.svg">
+  
+        <i class="toggle fa-solid fa-xmark"></i>
+      
+      
     </nav>
   </header>
   
@@ -44,7 +53,7 @@
       
       <div class="container grid">
         
-        <div class="title">
+        <div>
           <h1>O café que fará seu código decolar para o próximo nível.</h1>
         </div>
         
@@ -61,24 +70,72 @@
       
     </section>
     
-    <div class="divider-0"></div>
+    <div class="divider-home"></div>
     
     <section class="section" id="coffees">
-      <div class="container">
-        
-        <h2 class="text">Coffees</h2>
-        
+      <div class="container grid">
+        <header>
+          <div>
+            <h2 class="title">Coffees</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, est?
+            </p>
+          </div>
+
+        </header>
+        <div class="cards">
+
+          <div class="card">
+            
+            <i class="fa-solid fa-mug-hot"></i>
+            <h3 class="description">Cappuccino</h3>
+            <p>O cappuccino é uma deliciosa invenção italiana, que mistura o café espresso com leite vaporizado, resultando em um creme bem consistente.</p>
+          </div>
+
+          <div class="card">
+            <i class="fa-solid fa-mug-hot"></i>
+            <h3 class="description">Irish coffee</h3>
+            <p>Receita criada na Irlanda, o Irish coffee leva, além do café, o tradicional uísque irlandês e uma camada de creme.</p>
+          </div>
+
+          <div class="card">
+            <i class="fa-solid fa-mug-hot"></i>
+            <h3 class="description">Caffè latte</h3>
+            <p>O caffè latte também tem origem italiana e nada mais é do que o café com leite, também conhecido como pingado em algumas regiões do Brasil.</p>
+          </div>
+
+          <div class="card">
+            <i class="fa-solid fa-mug-hot"></i>
+              <h3 class="description">Café macchiato</h3>
+              <p>O macchiato é uma versão adocicada do espresso com uma “macchia di latte” (mancha de leite) vaporizada, que traz cremosidade e valoriza os açúcares da bebida.</p>  
+          </div>
+
+          <div class="card">
+            <i class="fa-solid fa-mug-hot"></i>
+              <h3 class="description">Café mocha</h3>
+              <p>O mocha ou mocaccino é para os fãs de chocolate, já que é feito com café espresso, leite vaporizado, espuma de leite e calda de chocolate.</p>  
+          </div>
+
+          <div class="card">
+            <i class="fa-solid fa-mug-hot"></i>
+              <h3 class="description">Café duplo</h3>
+              <p>Essa variedade da bebida nada mais é do que aquilo que o nome diz: duas medidas do café espresso servidas na mesma xícara.</p>  
+          </div>
+
+
+          </div>
+        </div>
       </div>
       
     </section>
 
     <div class="divider-1"></div>
 
-    <section class="section" id="about">
+    <section class="section" id="place">
       <div class="container">
 
-        <div class="text">
-          <h2>Sobre nós</h2>
+        <div>
+          <h2 class="title">Local</h2>
         </div>
 
       </div>
@@ -86,30 +143,51 @@
 
     <div class="divider-2"></div>
 
-    <section class="section">
-      <div class="container">
-        <div class="text">
-          <h2>Local</h2>
+    <section class="section" id="about">
+      <div class="container grid">
+        <div>
+          <img class="image" src="https://images.unsplash.com/photo-1507226983735-a838615193b0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDN8fGNvZmZlZSUyMHNob3B8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="">
+        </div>
+        <div>
+          <h2 class="title">Sobre nós</h2>
+          <div class="text">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum consequuntur maxime assumenda pariatur porro veritatis architecto iure, veniam, similique placeat, fugit accusantium ducimus. Minima mollitia et eaque a nesciunt iste.</p><br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed tempore eveniet laborum amet sit eligendi minima blanditiis quos aut. Laboriosam distinctio eveniet amet veniam animi aut officia? Quos, autem veniam!</p>
+          </div>
         </div>
       </div>
 
       <div class="divider-1"></div>
 
     </section>
-    <section class="section">
+    <section class="section" id="contact">
       <div class="container">
-        <div class="text">
-          <h2>Contato</h2>
+        <div>
+          <h2 class="title">Contato</h2>
         </div>
       </div>
     </section>
     
-    <div class="divider-2"></div>
+    <div class="divider-footer"></div>
 
   </main>
   <footer>
-    
+    <div class="container grid">
+
+      <div class="brand">  
+        <p>©2022 Thiago Domingues</p>
+        <p>Todos os direitos reservados</p>
+      </div>
+
+      <div class="social">
+        <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-telegram"></i></a>
+      </div>
+
+    </div>
   </footer>
-  
+
+<script src="main.js"></script>
 </body>
 </html>
