@@ -17,28 +17,29 @@
   <link href="https://fonts.googleapis.com/css2?family=Arima:wght@600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&display=swap" rel="stylesheet">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+
   <!-- Icons -->
   <script src="https://kit.fontawesome.com/302fb988c7.js" crossorigin="anonymous"></script>
 
 </head>
 <body>
-  <header id="header">
+  <header id="header" class="">
     <nav class="container">
       
       <a href="#home"><img  class="logo" src="./assets/assets/logo-mobile.svg"  alt="Logotipo da Rocketseat"></a>
 
-     <!------ home menu ------> 
+     <!------ Nav menu ------> 
       <div class="menu" >
         <ul class="grid">
-          <li><a class="title" href="#home">Home</a></li>
-          <li><a class="title" href="#coffees">Coffees</a></li>
-          <li><a class="title" href="#place">Local</a></li>
-          <li><a class="title" href="#about">Sobre nós</a></li>
-          <li><a class="title" href="#contact">Contato</a></li>
+          <li><a class="title-nav" href="#home">Home</a></li>
+          <li><a class="title-nav" href="#coffees">Coffees</a></li>
+          <li><a class="title-nav" href="#place">Local</a></li>
+          <li><a class="title-nav" href="#about">Sobre nós</a></li>
+          <li><a class="title-nav" href="#contact">Contato</a></li>
         </ul>
       </div>
-      <!------ //home menu ------>
+      <!------ //Nav menu ------>
        
         <img class="toggle" src="./assets/assets/menu-buguer-open.svg">
   
@@ -49,6 +50,7 @@
   </header>
   
   <main>
+          <!------ Home ------>
     <section class="section" id="home">
       
       <div class="container grid">
@@ -71,7 +73,7 @@
     </section>
     
     <div class="divider-home"></div>
-    
+          <!------ Coffees ------>
     <section class="section" id="coffees">
       <div class="container grid">
         <header>
@@ -90,36 +92,42 @@
             <i class="fa-solid fa-mug-hot"></i>
             <h3 class="description">Cappuccino</h3>
             <p>O cappuccino é uma deliciosa invenção italiana, que mistura o café espresso com leite vaporizado, resultando em um creme bem consistente.</p>
+            <strong>R$14,50</strong>
           </div>
 
           <div class="card">
             <i class="fa-solid fa-mug-hot"></i>
             <h3 class="description">Irish coffee</h3>
             <p>Receita criada na Irlanda, o Irish coffee leva, além do café, o tradicional uísque irlandês e uma camada de creme.</p>
+            <strong>R$14,50</strong>
           </div>
 
           <div class="card">
             <i class="fa-solid fa-mug-hot"></i>
             <h3 class="description">Caffè latte</h3>
             <p>O caffè latte também tem origem italiana e nada mais é do que o café com leite, também conhecido como pingado em algumas regiões do Brasil.</p>
+            <strong>R$14,50</strong>
           </div>
 
           <div class="card">
             <i class="fa-solid fa-mug-hot"></i>
               <h3 class="description">Café macchiato</h3>
               <p>O macchiato é uma versão adocicada do espresso com uma “macchia di latte” (mancha de leite) vaporizada, que traz cremosidade e valoriza os açúcares da bebida.</p>  
+              <strong>R$14,50</strong>
           </div>
 
           <div class="card">
             <i class="fa-solid fa-mug-hot"></i>
               <h3 class="description">Café mocha</h3>
               <p>O mocha ou mocaccino é para os fãs de chocolate, já que é feito com café espresso, leite vaporizado, espuma de leite e calda de chocolate.</p>  
+              <strong>R$14,50</strong>
           </div>
 
           <div class="card">
             <i class="fa-solid fa-mug-hot"></i>
               <h3 class="description">Café duplo</h3>
               <p>Essa variedade da bebida nada mais é do que aquilo que o nome diz: duas medidas do café espresso servidas na mesma xícara.</p>  
+              <strong>R$14,50</strong>
           </div>
 
 
@@ -130,19 +138,27 @@
     </section>
 
     <div class="divider-1"></div>
-
+          <!------ Place ------>
     <section class="section" id="place">
       <div class="container">
 
-        <div>
+        <header>
           <h2 class="title">Local</h2>
+          <p class="text">Seja para uma dia de trabalho, ou para uma pausa nele, temos o hambiente perfeito pra você!</p>
+        </header>
+
+        <div class="place">
+          
         </div>
+        <div class="place"></div>
+        <div class="place"></div>
+        <div class="place"></div>
 
       </div>
     </section>
 
     <div class="divider-2"></div>
-
+          <!------- About ------>
     <section class="section" id="about">
       <div class="container grid">
         <div>
@@ -156,34 +172,52 @@
           </div>
         </div>
       </div>
-
-      <div class="divider-1"></div>
-
     </section>
+
+    <div class="divider-1"></div>
+          <!------ Contact ------>
     <section class="section" id="contact">
       <div class="container">
-        <div>
-          <h2 class="title">Contato</h2>
+        <div class="content">
+          <h2 class="title">Entre em contato com a gente!</h2>
+          <p class="text">Entre em contato com a GreatCoffee, seja para tirar uma dúvida ou dar uma sugestão para que possamos melhorar, sua opnião é muito importanto para nós.</p>
         </div>
+        <a class="button" href="https://api.whatsapp.com/send?phone=+5511954957615&text=Oi, gostaria de saber mais informações sobre a GreatCoffee" target="_blank" ><i class="fa-brands fa-whatsapp"></i> Entrar em contato</a>
+          
+        <div class="links">
+            <ul class="grid">
+              <li><i class="fa-solid fa-phone"></i> +55 11 99999-9999</li>
+              <li><i class="fa-solid fa-envelope"></i> greatcoffee@email.com</li>
+              <li><i class="fa-brands fa-telegram"></i> GreatCoffee</li>
+            </ul>
+       </div>
+
       </div>
     </section>
     
     <div class="divider-footer"></div>
-
+          <!------ Footer ------>
   </main>
   <footer>
-    <div class="container grid">
+    <div class="container">
 
-      <div class="brand">  
-        <p>©2022 Thiago Domingues</p>
-        <p>Todos os direitos reservados</p>
+      
+      <div class="brand grid">
+        
+        <small class="copyright">  
+          <p>© Copyright 2022 <br>
+            <span>Thiago Domingues</span>.
+            <br>Todos os direitos reservados</p>
+        </small>
+  
+        <div class="social">
+          <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-telegram"></i></a>
+        </div>
+        
       </div>
 
-      <div class="social">
-        <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-        <a href="#"><i class="fa-brands fa-facebook"></i></a>
-        <a href="#"><i class="fa-brands fa-telegram"></i></a>
-      </div>
 
     </div>
   </footer>
