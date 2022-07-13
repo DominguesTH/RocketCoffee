@@ -5,7 +5,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GreatCoffee</title>
-   <meta name="description" content="Venha conferia as melhores opções de café do momento">
+  <meta name="description" content="Venha conferia as melhores opções de café do momento">
+
+ <!-- Swiper -->
+  <link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+  />
+    
 
   <!-- Styles -->
   <link rel="stylesheet" href="style.css">
@@ -19,12 +26,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
 
+
   <!-- Icons -->
   <script src="https://kit.fontawesome.com/302fb988c7.js" crossorigin="anonymous"></script>
 
 </head>
 <body>
-  <header id="header" class="">
+  <header id="header">
     <nav class="container">
       
       <a href="#home"><img  class="logo" src="./assets/assets/logo-mobile.svg"  alt="Logotipo da Rocketseat"></a>
@@ -59,7 +67,7 @@
           <h1>O café que fará seu código decolar para o próximo nível.</h1>
         </div>
         
-        <a class="button" href="#">Pegar meu café &gt;</a><br>
+        <a class="button" href="#coffees">Pegar meu café &gt;</a><br>
         
         <div class="subtitle">
           <h2>GreatCoffee</h2> 
@@ -141,18 +149,42 @@
           <!------ Place ------>
     <section class="section" id="place">
       <div class="container">
-
         <header>
           <h2 class="title">Local</h2>
           <p class="text">Seja para uma dia de trabalho, ou para uma pausa nele, temos o hambiente perfeito pra você!</p>
         </header>
 
-        <div class="place">
+        <div class="swiper">
+
+          <div class="swiper-wrapper">
+
+            <div class="place swiper-slide">
+              <img src="https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Y29mZmVlJTIwc2hvcHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="">
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta, excepturi?</p>
+            </div>
+    
+            <div class="place swiper-slide">
+              <img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Y29mZmVlJTIwc2hvcHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="">
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta, excepturi?</p>
+            </div>
+    
+            <div class="place swiper-slide">
+              <img src="https://images.unsplash.com/photo-1493857671505-72967e2e2760?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8Y29mZmVlJTIwc2hvcHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="">
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta, excepturi?</p>
+            </div>
+    
+            <div class="place swiper-slide">
+              <img src="https://images.unsplash.com/photo-1525193612562-0ec53b0e5d7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Y29mZmVlJTIwc2hvcHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="">
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta, excepturi?</p>
+            </div>
+
+          </div>
+
           
+            <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+     
         </div>
-        <div class="place"></div>
-        <div class="place"></div>
-        <div class="place"></div>
 
       </div>
     </section>
@@ -177,20 +209,24 @@
     <div class="divider-1"></div>
           <!------ Contact ------>
     <section class="section" id="contact">
-      <div class="container">
+      <div class="container grid">
         <div class="content">
           <h2 class="title">Entre em contato com a gente!</h2>
           <p class="text">Entre em contato com a GreatCoffee, seja para tirar uma dúvida ou dar uma sugestão para que possamos melhorar, sua opnião é muito importanto para nós.</p>
         </div>
-        <a class="button" href="https://api.whatsapp.com/send?phone=+5511954957615&text=Oi, gostaria de saber mais informações sobre a GreatCoffee" target="_blank" ><i class="fa-brands fa-whatsapp"></i> Entrar em contato</a>
+
+        <div>
+          <a class="button" href="https://api.whatsapp.com/send?phone=+5511954957615&text=Oi, gostaria de saber mais informações sobre a GreatCoffee" target="_blank" ><i class="fa-brands fa-whatsapp"></i> Entrar em contato</a>
           
-        <div class="links">
-            <ul class="grid">
-              <li><i class="fa-solid fa-phone"></i> +55 11 99999-9999</li>
-              <li><i class="fa-solid fa-envelope"></i> greatcoffee@email.com</li>
-              <li><i class="fa-brands fa-telegram"></i> GreatCoffee</li>
-            </ul>
-       </div>
+          <div class="links">
+              <ul class="">
+                <li><i class="fa-solid fa-phone"></i> +55 11 99999-9999</li>
+                <li><i class="fa-solid fa-envelope"></i> greatcoffee@email.com</li>
+                <li><i class="fa-brands fa-telegram"></i> GreatCoffee</li>
+              </ul>
+         </div>
+        </div>
+        
 
       </div>
     </section>
@@ -203,25 +239,42 @@
 
       
       <div class="brand grid">
+
+        <div class="social">
+          <div class="logo">
+
+            <a href="#home"><img  src="./assets/assets/logo-mobile.svg"  alt="Logotipo da Rocketseat"></a>
+
+          </div>
+          <div class="icons">
+
+            <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-telegram"></i></a>
+
+          </div>
+
+        </div>
         
         <small class="copyright">  
           <p>© Copyright 2022 <br>
-            <span>Thiago Domingues</span>.
-            <br>Todos os direitos reservados</p>
+          <span>Thiago Domingues</span>.
+          <br>Todos os direitos reservados</p>
         </small>
-  
-        <div class="social">
-          <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#"><i class="fa-brands fa-facebook"></i></a>
-          <a href="#"><i class="fa-brands fa-telegram"></i></a>
-        </div>
-        
+
       </div>
 
 
     </div>
   </footer>
+  <a class="back-to-top" href="#home"><i class="fa-solid fa-arrow-up"></i></a>
+ <!-- Swiper-->
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 
+ <!-- Scroll Reveal-->
+ <script src="https://unpkg.com/scrollreveal"></script>
+
+  <!-- Main..js -->
 <script src="main.js"></script>
 </body>
 </html>

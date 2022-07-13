@@ -20,6 +20,15 @@ a {
   --border: #29292E;
   --border-menu-mobile: #A8A8B3;
   --text-color-menu-mobile: #E1E1E6;
+
+  /*--------- Fonts ------*/
+  --title-font: 'Manrope';
+  --subtitle-font: 'Manrope', sans-serif;
+  --text-font: 'Manrope', sans-serif;
+  --description-font: 'Josefin Sans', sans-serif;
+  --text-navigation: 'Arima', cursive;
+
+
 }
 
 /*------ Base -----*/
@@ -32,7 +41,7 @@ html {
   background: linear-gradient(270deg,
       #FFF,
       #8257E5);
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
   margin-top: -0.25rem;
 }
 
@@ -65,12 +74,24 @@ html {
 
 /*------ Layout -----*/
 
+
+.grid {
+  display: grid;
+
+}
+
+.container {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  margin-bottom: auto;
+  margin-top: auto;
+}
+
 .title {
-  font-family: 'Manrope';
-  font-size: 2rem;
-  margin-top: 1rem;
+  font-family: var(--title-font);
+  font-size: 2.5rem;
+  margin-top: 2.5rem;
   margin-bottom: 2rem;
-  margin-top: 2rem;
   text-align: left;
 
   color: var(--backgrond);
@@ -82,7 +103,7 @@ html {
 }
 
 .title-nav {
-  font-family: 'Arima', cursive;
+  font-family: var(--text-navigation);
   font-size: 2rem;
   margin-top: 1rem;
   color: var(--text-color);
@@ -93,9 +114,7 @@ html {
 
 
 .description {
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 1.5rem;
-  margin-top: 1rem;
+  font-family: var(--description-font);
   color: var(--text-color);
   margin-bottom: 2rem;
   margin-top: 2rem;
@@ -105,44 +124,26 @@ html {
   color: var(--text-color);
   letter-spacing: 0.03rem;
   line-height: 1.3rem;
-  font-family: Manrope, sans-serif;
+  font-family: var(--text-font);
   text-align: left;
   font-size: .90em;
   margin-bottom: 1rem;
 
 }
 
-
 body {
   background-color: var(--backgrond)
 }
 
-.container {
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
-  margin-bottom: auto;
-  margin-top: auto;
-}
-
-.grid {
-  display: grid;
-
-}
-
-.section {
-  margin-bottom: auto;
-}
-
 /*------ Header -----*/
 #header {
+
   background-color: var(--backgrond);
   border-bottom: 1px solid var(--border-menu-mobile);
   padding: 1.5rem;
   position: fixed;
-
   width: 100%;
-  justify-content: space-between;
-  z-index: 1;
+  z-index: 999;
 }
 
 #header nav {
@@ -158,11 +159,6 @@ body {
   box-shadow: 0px 0px 25px #8257e659;
   background-color: #41009B;
 }
-
-#header.scroll img {
-  color: white;
-}
-
 
 /*------ Navigation -----*/
 
@@ -268,7 +264,7 @@ nav.show i.fa-xmark {
   margin: 10rem 2rem;
   font-size: 1.87rem;
   letter-spacing: 0.03rem;
-  font-family: 'Manrope';
+  font-family: var(--title-font);
   line-height: 2.5rem;
   font-weight: 600;
   margin-bottom: 5rem;
@@ -289,7 +285,7 @@ nav.show i.fa-xmark {
 #home .subtitle {
   text-align: center;
   font-size: 1.87rem;
-  font-family: Manrope, sans-serif;
+  font-family: var(--subtitle-font);
   color: var(--text-color);
   margin-bottom: 2rem;
   margin-top: 4rem;
@@ -312,15 +308,8 @@ nav.show i.fa-xmark {
   background-size: contain;
 }
 
-#home .blur {
-  position: relative;
-  width: 100%;
-}
-
 #home .container {
   justify-items: center;
-
-
 }
 
 /*------ Coffees -----*/
@@ -357,6 +346,34 @@ nav.show i.fa-xmark {
 
 }
 
+/*------ Place -----*/
+#place {
+  text-align: center;
+}
+
+#place img {
+  max-width: 100%;
+  border-radius: .5rem;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+
+.place p {
+  color: var(--text-color);
+  font-family: var(--text-font);
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+
+span.swiper-pagination-bullet {
+  background-color: #8257e59d;
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: var(--button);
+}
+
 /*------ About -----*/
 #about .image {
   border-radius: 0.5rem;
@@ -379,17 +396,17 @@ nav.show i.fa-xmark {
   text-align: left;
 }
 
-#contact .content {
-  margin-bottom: 4rem;
-}
-
 #contact .button {
   color: var(--text-color-menu-mobile);
   border: 1.5px solid var(--button);
   border-radius: 0.25rem;
   padding: 0.5rem 2rem;
   transition: background 0.5s;
-  margin-bottom: 10rem;
+  display: block;
+  max-width: fit-content;
+  margin: auto;
+  margin-bottom: 4rem;
+  margin-top: 1.2em;
 
 }
 
@@ -406,7 +423,7 @@ nav.show i.fa-xmark {
 
 
 .links ul {
-  margin: 2rem auto;
+  margin: auto;
   padding: 0;
 }
 
@@ -427,7 +444,7 @@ nav.show i.fa-xmark {
 .links ul li {
   margin-top: 1rem;
   color: var(--text-color);
-  font-family: 'Manrope';
+  font-family: var(--text-font);
   font-size: 1rem;
 }
 
@@ -437,15 +454,48 @@ nav.show i.fa-xmark {
 footer {
   background-color: #41009B;
   padding: 2rem 0rem;
-}
-
-footer div {
   color: var(--text-color-menu-mobile)
 }
 
+
 footer .grid {
   display: flex;
+  padding: 0rem 0rem;
+  justify-content: space-between;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 
+}
+
+footer .social {
+  display: inline-block;
+  font-size: 1.5rem;
+  display: grid;
+  align-items: center;
+  text-align: center;
+}
+
+footer .logo img {
+  max-width: 85%;
+  padding-right: .8rem;
+}
+
+footer .icons {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+footer .copyright {
+  text-align: center;
+  line-height: 2rem;
+}
+
+footer .copyright p {
+
+  font-size: 0.9rem;
+  font-family: 'Manrope';
+  font-weight: 400;
 }
 
 footer span {
@@ -456,29 +506,6 @@ footer span {
 
 }
 
-footer .brand p {
-
-  font-size: 0.9rem;
-  font-family: 'Manrope';
-  font-weight: 400;
-}
-
-footer .copyright {
-  text-align: center;
-  line-height: 2rem;
-}
-
-footer .grid {
-  justify-content: space-between;
-}
-
-footer .social {
-  display: flex;
-  gap: 1.8rem;
-  align-items: center;
-  font-size: 1.5rem;
-}
-
 footer a {
   color: var(--text-color)
 }
@@ -487,4 +514,158 @@ footer a:hover {
   transform: translateY(3px);
   transition: 0.3s;
   color: red
+}
+
+/*------ Back to top -----*/
+.back-to-top {
+  background-color: #41009B;
+  color: var(--text-color);
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  clip-path: circle();
+  padding: .8rem;
+  font-size: .8rem;
+  line-height: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: .3s;
+  transform: translateY(100%);
+}
+
+.back-to-top.show {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/*====== MEDIA QUERIES ======*/
+/* Size: 1200*/
+@media (min-width: 1200px) {
+  section {
+    padding: 10rem;
+
+
+  }
+
+
+  /*------ Navigation -----*/
+
+  #header nav {
+    justify-content: center;
+    gap: 15rem;
+  }
+
+  nav .menu {
+    opacity: 1;
+    visibility: visible;
+    z-index: 999;
+    top: 2rem;
+
+  }
+
+  nav .menu ul {
+    display: flex;
+    gap: 2rem;
+  }
+
+  nav .menu ul a.title-nav {
+    font-size: 1rem;
+  }
+
+  nav .toggle {
+    visibility: hidden;
+  }
+
+
+  /*------ Home -----*/
+  #home {
+    background: url(/assets/assets/blur-1.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+  }
+
+  #home a.button {
+    display: none;
+  }
+
+  #home h1 {
+    display: none;
+  }
+
+  #home .image {
+    background: none;
+    max-width: 60%;
+    align-items: center;
+    margin: auto;
+    display: block;
+  }
+
+  /*------ footer -----*/
+  footer .grid {
+    justify-content: space-around;
+  }
+
+  /*------ Back to top -----*/
+  .back-to-top {
+    right: 3rem;
+    bottom: 3rem;
+  }
+
+}
+
+/* Size: 1023*/
+@media (min-width: 1023px) {}
+
+/* Size: 992*/
+@media (min-width: 992px) {}
+
+/* Size: 767*/
+@media (min-width: 767px) {
+  .title {
+    font-size: 3.3rem;
+  }
+
+  .title-nav {
+    font-size: 3.3rem;
+  }
+
+  /*------ Header -----*/
+  #header .logo {
+    width: 13rem;
+  }
+
+  #header .toggle {
+    width: 2.5rem;
+  }
+
+  /*------ Home -----*/
+
+  #home h1 {
+    font-size: 2.2rem;
+    margin: 10rem 2rem 5rem;
+  }
+
+  #home .button {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+
+  #home .subtitle {
+    font-size: 3rem;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  /*------ Coffees -----*/
+  .cards h3,
+  .cards i {
+    font-size: 2rem;
+  }
+
+  .cards {
+    display: grid;
+
+  }
 }
