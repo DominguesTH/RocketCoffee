@@ -160,7 +160,14 @@ body {
   background-color: #41009B;
 }
 
+#header .logo-desktop {
+  display: none;
+}
+
 /*------ Navigation -----*/
+nav .button-desktop {
+  display: none;
+}
 
 nav .menu {
   opacity: 0;
@@ -236,6 +243,7 @@ nav.show .menu ul {
 .toggle {
   font-size: 1.5rem;
   cursor: pointer;
+  ;
 }
 
 nav .fa-xmark {
@@ -308,6 +316,13 @@ nav.show i.fa-xmark {
   background-size: contain;
 }
 
+#home .blur2,
+#home .blur1 {
+  visibility: hidden;
+  position: absolute;
+  display: none;
+}
+
 #home .container {
   justify-items: center;
 }
@@ -318,6 +333,11 @@ nav.show i.fa-xmark {
   color: var(--button);
   margin-right: 0.2rem;
   font-size: 1.4rem;
+}
+
+.card h3:hover,
+.card i:hover {
+  color: red;
 }
 
 .card h3 {
@@ -339,12 +359,13 @@ nav.show i.fa-xmark {
   border: 2px solid var(--button);
   border-radius: 1.8rem;
   margin: 2rem auto;
-  padding: 1rem;
+  padding: 2.5rem 1.2rem;
   text-align: center;
   box-shadow: 0px 0px 8px #ffffff4f;
   border-bottom: 0.10rem solid var(--text-color);
 
 }
+
 
 /*------ Place -----*/
 #place {
@@ -407,7 +428,11 @@ span.swiper-pagination-bullet {
   margin: auto;
   margin-bottom: 4rem;
   margin-top: 1.2em;
+  font-family: var(--title-font);
+}
 
+#contact .button i {
+  margin-right: .3em;
 }
 
 #contact .button:hover {
@@ -539,21 +564,42 @@ footer a:hover {
   transform: translateY(0);
 }
 
-/*====== MEDIA QUERIES ======*/
+/*============= MEDIA QUERIES ===============*/
 /* Size: 1200*/
 @media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.5rem 8rem 1.5rem 8rem
+  }
+
+  .section header {
+    text-align-last: center
+  }
+
   section {
-    padding: 10rem;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
 
+  /*------ Navigation -----*/
+  #header .logo-desktop {
+    display: block;
+  }
 
+  #header .logo {
+    display: none;
+  }
+
+  #header {
+    padding-left: 8rem;
+    padding-right: 0rem;
   }
 
 
-  /*------ Navigation -----*/
-
   #header nav {
-    justify-content: center;
-    gap: 15rem;
+    justify-content: space-between;
   }
 
   nav .menu {
@@ -567,23 +613,41 @@ footer a:hover {
   nav .menu ul {
     display: flex;
     gap: 2rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+
   }
 
   nav .menu ul a.title-nav {
     font-size: 1rem;
+    font-family: var(--title-font)
   }
 
   nav .toggle {
     visibility: hidden;
+    display: none;
   }
 
+  nav .button-desktop {
+    color: var(--text-color-menu-mobile);
+    border: 1.5px solid var(--button);
+    border-radius: 0.25rem;
+    padding: 0.5rem 2rem;
+    transition: background 0.3s;
+    display: block;
+    min-width: max-content;
+    font-family: var(--title-font)
+  }
+
+  nav .button-desktop:hover {
+    background-color: var(--button);
+  }
 
   /*------ Home -----*/
-  #home {
-    background: url(/assets/assets/blur-1.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    position: relative;
+
+  section#home {
+    padding: 8rem 8rem .2rem 8rem;
+    content-visibility: auto
   }
 
   #home a.button {
@@ -602,15 +666,99 @@ footer a:hover {
     display: block;
   }
 
+  #home .blur2,
+  #home .blur1 {
+    visibility: visible;
+    position: absolute;
+    display: block;
+  }
+
+  #home .blur1 {
+    bottom: .2rem;
+    left: 0;
+
+  }
+
+  #home .blur2 {
+    margin: 0;
+    top: 0;
+    right: 0;
+    z-index: 999;
+  }
+
+  /*------ About -----*/
+  #about .grid {
+    grid-auto-flow: column;
+    gap: 6rem;
+  }
+
+  #about .image {
+    align-self: center;
+    min-width: max-content;
+  }
+
+  #about .text {
+    text-align: left;
+  }
+
+  #about .title {
+    margin-bottom: 4rem;
+  }
+
+  /*------ Contact -----*/
+
+  #contact .grid {
+    grid-auto-flow: column;
+
+  }
+
+  #contact .content {
+    max-width: 30rem;
+
+  }
+
+  #contact .content-links {
+    padding: 2rem;
+    align-self: center;
+
+  }
+
+  #contact .button {
+    display: inline;
+    align-items: center;
+  }
+
+  #contact .links {
+    margin-top: 2.5rem;
+  }
+
   /*------ footer -----*/
   footer .grid {
     justify-content: space-around;
+  }
+
+  footer .logo img {
+    max-width: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  footer .social {
+    font-size: 2rem;
+  }
+
+  footer .copyright p {
+    font-size: 1rem;
+  }
+
+  footer span {
+    font-size: 1.3rem;
   }
 
   /*------ Back to top -----*/
   .back-to-top {
     right: 3rem;
     bottom: 3rem;
+    font-size: 2rem;
   }
 
 }
